@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期末作業</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>我的一頁式網頁</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">介紹</a></li>
+                <li><a href="#carousel">圖片輪播</a></li>
+                <li><a href="#info">相關資訊</a></li>
+                <li><a href="#footer">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="section1">
+        <h2>歡迎來到我的網站</h2>
+        <p>這是一個展示簡單網頁功能的範例，請參考以下內容。</p>
+    </section>
+
+    <section id="carousel" class="carousel">
+        <div class="slides">
+            <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
+            <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+            <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+        </div>
+    </section>
+
+    <section id="info">
+        <h2>相關資訊</h2>
+        <p>這裡可以顯示各種相關資訊，比如：服務項目、聯絡方式等。</p>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; 2024 我的網頁. All rights reserved.</p>
+        <p>聯絡我們: email@example.com</p>
+    </footer>
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.slides img');
+        setInterval(() => {
+            slides.forEach((slide, i) => slide.style.display = i === index ? 'block' : 'none');
+            index = (index + 1) % slides.length;
+        }, 3000);
+    </script>
+</body>
+</html>
